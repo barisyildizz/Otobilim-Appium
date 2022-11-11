@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="false">
+<!--    <test name="Android Test">-->
+<!--        <parameter name="platformName" value="Android"></parameter>-->
+<!--        <parameter name="platformVersion" value="11"></parameter>-->
+<!--        <parameter name="deviceName" value="any"></parameter>-->
+<!--        <classes>-->
+<!--            <class name="OnboardingTestCases"/>-->
+<!--            &lt;!&ndash;           <class name="LoginTestCases">&ndash;&gt;-->
+<!--            &lt;!&ndash;&lt;!&ndash;                <methods>&ndash;&gt;&ndash;&gt;-->
+<!--            &lt;!&ndash;&lt;!&ndash;                    <include name="LoginwithRegisteredPhoneNumber"/>&ndash;&gt;&ndash;&gt;-->
+<!--            &lt;!&ndash;&lt;!&ndash;                </methods>&ndash;&gt;&ndash;&gt;-->
+<!--            &lt;!&ndash;            </class>&ndash;&gt;-->
+<!--        </classes>-->
+<!--    </test>-->
+    <test name="iOS Test">
+        <parameter name="platformName" value="iOS"></parameter>
+        <parameter name="platformVersion" value="16"></parameter>
+        <parameter name="deviceName" value="iPhone 14 Pro Max"></parameter>
+        <classes>
+<!--            <class name="OnboardingTestCases"/>-->
+                            <class name="LoginTestCases">
+                                <methods>
+                              <include name="LoginwithRegisteredPhoneNumber"/>
+                                </methods>
+                            </class>
+        </classes>
+    </test>
+</suite>
