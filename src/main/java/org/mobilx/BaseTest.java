@@ -87,31 +87,31 @@ public class BaseTest {
                 driver = new AndroidDriver(url, desiredCapabilities);
                 break;
 
-            case "iOS":
-                desiredCapabilities.setCapability("automationName", properties.getProperty("iOSAutomationName"));
-                String appURL = System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator +
-                        "apps" + File.separator + "OtobilimTest_0.7.0.ipa";
-                desiredCapabilities.setCapability("app", appURL);
-                desiredCapabilities.setCapability("bundleId", properties.getProperty("iOSBundleID"));
-                desiredCapabilities.setCapability("udid", properties.getProperty("iOSudid"));
-                url = new URL(properties.getProperty("appiumURL"));
-                driver = new IOSDriver(url, desiredCapabilities);
-                break;
-
 //            case "iOS":
-//                desiredCapabilities.setCapability("browserstack.user", "timucintuncer_znuMY1");
-//                desiredCapabilities.setCapability("browserstack.key", "Rkm64pdBkV2skV8pF58K");
-//                desiredCapabilities.setCapability("app", "bs://c54b836fcf38ef52f49d47800aa71ab55d7a06bb");
-//                // desiredCapabilities.setCapability("device", "iPhone 14 Pro Max");
-//                //   desiredCapabilities.setCapability("os_version", "16");
-//                desiredCapabilities.setCapability("project", "Otobilim iOS");
-//                desiredCapabilities.setCapability("build", "Otobilim iOS Build 1");
-//                desiredCapabilities.setCapability("name", "Otobilim iOS Test");
-//                desiredCapabilities.setCapability("browserstack.local", "true");
-//
-//                driver = new IOSDriver<IOSElement>(
-//                        new URL("http://hub-cloud.browserstack.com/wd/hub"), desiredCapabilities);
+//                desiredCapabilities.setCapability("automationName", properties.getProperty("iOSAutomationName"));
+//                String appURL = System.getProperty("user.dir") + File.separator + "src" + File.separator + "main" + File.separator + "resources" + File.separator +
+//                        "apps" + File.separator + "OtobilimTest_0.7.0.ipa";
+//                desiredCapabilities.setCapability("app", appURL);
+//                desiredCapabilities.setCapability("bundleId", properties.getProperty("iOSBundleID"));
+//                desiredCapabilities.setCapability("udid", properties.getProperty("iOSudid"));
+//                url = new URL(properties.getProperty("appiumURL"));
+//                driver = new IOSDriver(url, desiredCapabilities);
 //                break;
+
+            case "iOS":
+                desiredCapabilities.setCapability("browserstack.user", "timucintuncer_znuMY1");
+                desiredCapabilities.setCapability("browserstack.key", "Rkm64pdBkV2skV8pF58K");
+                desiredCapabilities.setCapability("app", "bs://c54b836fcf38ef52f49d47800aa71ab55d7a06bb");
+                // desiredCapabilities.setCapability("device", "iPhone 14 Pro Max");
+                //   desiredCapabilities.setCapability("os_version", "16");
+                desiredCapabilities.setCapability("project", "Otobilim iOS");
+                desiredCapabilities.setCapability("build", "Otobilim iOS Build 1");
+                desiredCapabilities.setCapability("name", "Otobilim iOS Test");
+                desiredCapabilities.setCapability("browserstack.local", "true");
+
+                driver = new IOSDriver<IOSElement>(
+                        new URL("http://hub-cloud.browserstack.com/wd/hub"), desiredCapabilities);
+                break;
 
 //            case "Android":
 //                DesiredCapabilities caps = new DesiredCapabilities();
